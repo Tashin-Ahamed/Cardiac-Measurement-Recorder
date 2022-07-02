@@ -58,6 +58,8 @@ See the [Wiki](https://github.com/Tashin-Ahamed/Cardiac-Measurement-Recorder/wik
 ### -updateRecords
 • Will update Records
 
+# UI DESIGN
+
 
 ![Home Screen](https://user-images.githubusercontent.com/54912601/177003827-39403f57-a03b-4df2-a7b8-307527b3f486.png)
 # Home SCREEN
