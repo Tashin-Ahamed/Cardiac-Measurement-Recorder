@@ -7,8 +7,11 @@
 # INSERT NEW MEASUREMENT
 
 ![Home Screen (4)](https://user-images.githubusercontent.com/54912601/177003844-43770db3-8440-4f16-876a-9da1ce864722.png)
+# VIEW MEASUREMENT'S DETAIS
 
 ![Home Screen (5)](https://user-images.githubusercontent.com/54912601/177003847-0e2b57cb-d563-4fbe-bd24-85303feca6e3.png)
+# UPDATE MEASUREMENT
+
 
 ## Contributors
 1. [Nafia Hossain, Roll: 1807079](https://github.com/nafiahossain)
