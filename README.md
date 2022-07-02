@@ -1,3 +1,5 @@
+# Cardiac Measurement Recorder
+
 
 ![Home Screen](https://user-images.githubusercontent.com/54912601/177003827-39403f57-a03b-4df2-a7b8-307527b3f486.png)
 # Home SCREEN
@@ -14,4 +16,7 @@
 
 
 ## Contributors
-1. [Tashin Ahamed, Roll:1807083](https://github.com/Tashin-Ahamed)
+1807079_Nafia
+1. [Nafia Hossain, Roll: 1807079](https://github.com/nafiahossain)
+1807083_Tashin
+2. [Tashin Ahamed, Roll:1807083](https://github.com/Tashin-Ahamed)
