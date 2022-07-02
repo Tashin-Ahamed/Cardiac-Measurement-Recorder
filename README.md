@@ -14,5 +14,4 @@
 
 
 ## Contributors
-1. [Nafia Hossain, Roll: 1807079](https://github.com/nafiahossain)
-2. [Tashin Ahamed, Roll:1807083](https://github.com/Tashin-Ahamed)
+1. [Tashin Ahamed, Roll:1807083](https://github.com/Tashin-Ahamed)
