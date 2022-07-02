@@ -6,7 +6,7 @@ For patients at high risk for heart disease, this app is greatly convenient sinc
 
 This app will let the patients to create records of blood pressure and heart rate, keep record of time and date of measurement and update and delete previously recorded records. 
 
-See the https://github.com/Tashin-Ahamed/Cardiac-Measurement-Recorder/wiki for documentation, implementation details, and history.
+See the [Wiki](https://github.com/Tashin-Ahamed/Cardiac-Measurement-Recorder/wiki) for documentation, implementation details, and history.
 
 ![Home Screen](https://user-images.githubusercontent.com/54912601/177003827-39403f57-a03b-4df2-a7b8-307527b3f486.png)
 # Home SCREEN
@@ -24,5 +24,4 @@ See the https://github.com/Tashin-Ahamed/Cardiac-Measurement-Recorder/wiki for d
 
 ## Contributors
 1. [Nafia Hossain, Roll: 1807079](https://github.com/nafiahossain)
-1807083_Tashin
 2. [Tashin Ahamed, Roll:1807083](https://github.com/Tashin-Ahamed)
