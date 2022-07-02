@@ -8,6 +8,57 @@ This app will let the patients to create records of blood pressure and heart rat
 
 See the [Wiki](https://github.com/Tashin-Ahamed/Cardiac-Measurement-Recorder/wiki) for documentation, implementation details, and history.
 
+## Unified Modeling Language
+![uml](https://user-images.githubusercontent.com/54912601/177001173-38dbdb8b-81e8-4a45-a854-6b730313e019.png)
+
+## RECORDS
+
+###  -DATE
+• date measured (presented in dd-mm-yyyy format)
+
+#### _getDate()_ will get user input of specific DATE
+#### _setDate()_ will set the value of DATE takes from user
+ 
+### -TIME
+ • time measured (presented in hh:mm format) 
+ #### _getTime()_ will get user input of the current Time of that moment
+ #### _setTime()_ will set the value of TIME taken from the user
+
+### -Systolic
+• Systolic pressure in mm Hg (non-negative integer) 
+ #### _getSystolic()_ will get user input of the current Time of that moment
+ #### _setSystolic()_ will set the value of TIME taken from the user
+
+### -Diastolic
+ • Diastolic pressure in mm Hg (non-negative integer) 
+ #### _getDiastolic()_ will get user input of the current Time of that moment
+ #### _setSystolic()_ will set the value of TIME taken from the user
+
+### -Heartrate
+ • heart rate in beats per minute (non-negative integer) 
+ #### _getHeartrate()_ will get user input Heartrate
+ #### _setHeartrate()_ will set the value taken from the user
+
+### -Comment
+ • it will let the user add notes (textual, up to 20 characters)
+ #### _getComment()_ will get user input Comment
+ #### _setComment()_ will set the value taken from the user
+
+## -RECORD_LIST
+
+### -addRecords
+• Table of Records
+
+### -deleteRecords
+• Will delete Records
+
+### -fatchRecordfromDB
+• Will fatch Record from Database
+
+### -updateRecords
+• Will update Records
+
+
 ![Home Screen](https://user-images.githubusercontent.com/54912601/177003827-39403f57-a03b-4df2-a7b8-307527b3f486.png)
 # Home SCREEN
 ![Home Screen (2)](https://user-images.githubusercontent.com/54912601/177003837-541c63f3-3368-4509-b08b-2e4df7dbc17e.png)
