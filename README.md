@@ -8,6 +8,7 @@ This app will let the patients to create records of blood pressure and heart rat
 
 See the [Wiki](https://github.com/Tashin-Ahamed/Cardiac-Measurement-Recorder/wiki) for documentation, implementation details, and history.
 
+
 ## Unified Modeling Language
 ![uml](https://user-images.githubusercontent.com/54912601/177001173-38dbdb8b-81e8-4a45-a854-6b730313e019.png)
 
@@ -43,8 +44,6 @@ See the [Wiki](https://github.com/Tashin-Ahamed/Cardiac-Measurement-Recorder/wik
  • it will let the user add notes (textual, up to 20 characters)
  #### _getComment()_ will get user input Comment
  #### _setComment()_ will set the value taken from the user
-
-## -RECORD_LIST
 
 ### -addRecords
 • Table of Records
