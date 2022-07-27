@@ -35,6 +35,10 @@ public class UpdateMeasurement extends AppCompatActivity {
     ModelClass modelClass;
     EditText date,time,systolic,diastolic,heartRate,comment;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +80,12 @@ public class UpdateMeasurement extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * This method if for validation of user input
+     * @return
+     * returns true when user inserts valid data. otherwise returns false
+     */
     private boolean CheckFieldValidity() {
         if (date.length() == 0) {
             date.setError("This field is required");
@@ -147,6 +157,9 @@ public class UpdateMeasurement extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Method for getting a date from user through date picker
+     */
     private void datePicker()
     {
         date.setOnClickListener(new View.OnClickListener() {
@@ -163,6 +176,13 @@ public class UpdateMeasurement extends AppCompatActivity {
             }
         });
         onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            /**
+             *
+             * @param view
+             * @param year
+             * @param month
+             * @param dayOfMonth
+             */
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 dateStr = dayOfMonth + "-" + (month + 1) + "-" + year;
@@ -170,14 +190,28 @@ public class UpdateMeasurement extends AppCompatActivity {
             }
         };
     }
+
+    /**
+     *  Method for getting a time from user through time picker
+     */
     private void timePicker() {
         time.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 Calendar calendar = Calendar.getInstance();
                 int hour =calendar.get(Calendar.HOUR_OF_DAY);
                 int minute =calendar.get(Calendar.MINUTE);
                 TimePickerDialog dialog =  new TimePickerDialog(UpdateMeasurement.this, new TimePickerDialog.OnTimeSetListener() {
+                    /**
+                     *
+                      * @param view
+                     * @param hourOfDay
+                     * @param minute
+                     */
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         timeStr = hourOfDay + ":" +minute;
@@ -191,6 +225,9 @@ public class UpdateMeasurement extends AppCompatActivity {
         });
     }
 
+    /**
+     *  method for saving data to shared preference
+     */
     private void saveData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
@@ -200,6 +237,10 @@ public class UpdateMeasurement extends AppCompatActivity {
         editor.putString("details",jsonString);
         editor.apply();
     }
+
+    /**
+     *  method for retrieving data from shared preference
+     */
     private void loadData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);

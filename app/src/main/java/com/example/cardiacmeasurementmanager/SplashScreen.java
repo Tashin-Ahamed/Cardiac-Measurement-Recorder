@@ -9,8 +9,10 @@ import android.os.Handler;
 public class SplashScreen extends AppCompatActivity {
 
 
-
-
+    /**
+     * Starting
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,9 @@ public class SplashScreen extends AppCompatActivity {
 
         }
         new Handler().postDelayed(new Runnable() {
+            /**
+             * Running
+             */
             @Override
             public void run() {
                 startActivity(new Intent(SplashScreen.this, MainActivity.class));
