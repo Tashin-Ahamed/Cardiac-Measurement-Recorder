@@ -19,11 +19,21 @@ public class RecordList {
             records.add(record);
         }
     }
+    /**
+     * This method is for returning a sorted list
+     * @return
+     *      returns a sorted list of records
+     */
     public List<ModelClass> sortRecords() {
         List<ModelClass> recordList = records;
         Collections.sort(recordList);
         return recordList;
     }
+    /**
+     * This method deletes an existing method to the list
+     * @param record
+     *      the object which is going to be deleted from the list
+     */
     public void deleteRecord (ModelClass record) {
         if(records.contains(record)) {
             records.remove(record);
