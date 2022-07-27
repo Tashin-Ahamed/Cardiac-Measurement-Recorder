@@ -3,9 +3,7 @@ package com.example.cardiacmeasurementmanager;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * Model Class
- */
+
 public class ModelClass implements Parcelable, Comparable<ModelClass> {
 
     private String date="";
@@ -211,7 +209,7 @@ public class ModelClass implements Parcelable, Comparable<ModelClass> {
     }
 
     /**
-     * 
+     *
      * @param record
      * @return
      */

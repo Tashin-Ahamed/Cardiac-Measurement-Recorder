@@ -27,16 +27,36 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     private final Context context;
     private final int greenColor;
     private final int redColor;
+
+    /**
+     *
+     * @param context
+     * @param list
+     * @param greenC
+     * @param redC
+     */
     public RecyclerAdapter(Context context,  ArrayList<ModelClass> list,int greenC,int redC) {
         this.arrayList=list;
         this.context = context;
         this.greenColor =greenC;
         this.redColor = redC;
     }
+
+    /**
+     *
+     * @param customClickListener
+     */
     public void setCustomClickListener(CustomClickListener customClickListener)
     {
         this.customClickListener = customClickListener;
     }
+
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,6 +65,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.RecyclerViewHolder holder, @SuppressLint("RecyclerView") int position) {
         if (!arrayList.isEmpty()) modelClass = arrayList.get(position);
@@ -53,6 +78,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.diastolicTextView.setText(""+modelClass.getDiastolic());
         holder.heartTextView.setText(""+modelClass.getHeartRate());
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 int position = holder.getAdapterPosition();
@@ -88,15 +117,22 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getItemCount() {
         return arrayList.size();
     }
 
+
     public interface CustomClickListener {
         void cusOnClick(int position, View v);
         void onDeleteClick(int position);
     }
+
+
     public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView systolicTextView;
         TextView heartTextView;
@@ -104,6 +140,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         TextView dateTextView;
         CardView containerCardView;
         ImageView deleteButton;
+
+        /**
+         * 
+         * @param itemView
+         */
         public RecyclerViewHolder(@NonNull View itemView) {
             super(itemView);
             systolicTextView = itemView.findViewById(R.id.tvSystolic);
@@ -114,6 +155,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             deleteButton = itemView.findViewById(R.id.deleteIm);
             itemView.setOnClickListener(this);
         }
+
+        /**
+         *
+         * @param view
+         */
         @Override
         public void onClick(View view) {
             customClickListener.cusOnClick(getAdapterPosition(), view);  //position and view setting to provide to mainactivity

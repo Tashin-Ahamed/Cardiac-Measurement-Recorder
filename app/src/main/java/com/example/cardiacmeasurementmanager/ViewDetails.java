@@ -27,6 +27,10 @@ public class ViewDetails extends AppCompatActivity {
     TextView date, time, systolic, diastolic, heartRate, comment;
     Button editButton, backButton;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,12 +54,20 @@ public class ViewDetails extends AppCompatActivity {
         heartRate.setText("" + modelClass.getHeartRate());
         comment.setText("" + modelClass.getComment());
         backButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
         editButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(ViewDetails.this,UpdateMeasurement.class);
@@ -66,6 +78,9 @@ public class ViewDetails extends AppCompatActivity {
         });
     }
 
+    /**
+     * method for saving data to shared preference
+     */
     private void saveData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
@@ -75,6 +90,10 @@ public class ViewDetails extends AppCompatActivity {
         editor.putString("details",jsonString);
         editor.apply();
     }
+
+    /**
+     * method for retrieving data from shared preference
+     */
     private void loadData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);

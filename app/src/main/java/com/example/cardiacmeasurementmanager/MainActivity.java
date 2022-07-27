@@ -17,9 +17,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-/**
- * Main activity class
- */
+
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     public static RecyclerAdapter recyclerAdapter;
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Function to save data
+     * Method to save data
      */
     private void saveData()
     {
@@ -100,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Function to load data
+     * Method to load data
      */
     private void loadData()
     {
