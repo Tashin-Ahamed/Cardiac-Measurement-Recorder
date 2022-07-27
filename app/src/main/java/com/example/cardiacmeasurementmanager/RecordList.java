@@ -19,5 +19,10 @@ public class RecordList {
             records.add(record);
         }
     }
+    public List<ModelClass> sortRecords() {
+        List<ModelClass> recordList = records;
+        Collections.sort(recordList);
+        return recordList;
+    }
 
 }
