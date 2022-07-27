@@ -24,5 +24,12 @@ public class RecordList {
         Collections.sort(recordList);
         return recordList;
     }
+    public void deleteRecord (ModelClass record) {
+        if(records.contains(record)) {
+            records.remove(record);
+        } else {
+            throw new IllegalArgumentException();
+        }
+    }
 
 }
