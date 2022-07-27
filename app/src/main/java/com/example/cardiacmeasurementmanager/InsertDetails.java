@@ -23,6 +23,9 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+/**
+ * Insert Details class
+ */
 public class InsertDetails extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
@@ -35,7 +38,10 @@ public class InsertDetails extends AppCompatActivity {
     Button saveButton;
     String dateStr,timeStr;
 
-
+    /**
+     * saved Instance State
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,10 @@ public class InsertDetails extends AppCompatActivity {
         saveButton = findViewById( R.id.addButton);
         loadData();
         date.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 Calendar calendar = Calendar.getInstance();
@@ -62,6 +72,10 @@ public class InsertDetails extends AppCompatActivity {
             }
         });
         time.setOnClickListener(new View.OnClickListener() {
+            /**
+             *
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 Calendar calendar = Calendar.getInstance();
@@ -69,6 +83,12 @@ public class InsertDetails extends AppCompatActivity {
                 int minute =calendar.get(Calendar.MINUTE);
                 //calendar.clear();
                 TimePickerDialog dialog =  new TimePickerDialog(InsertDetails.this, new TimePickerDialog.OnTimeSetListener() {
+                    /**
+                     *
+                     * @param view
+                     * @param hourOfDay
+                     * @param minute
+                     */
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         timeStr = hourOfDay + ":" +minute;
@@ -83,6 +103,13 @@ public class InsertDetails extends AppCompatActivity {
             }
         });
         onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            /**
+             * 
+             * @param view
+             * @param year
+             * @param month
+             * @param dayOfMonth
+             */
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 dateStr = dayOfMonth + "-" + (month + 1) + "-" + year;
@@ -107,6 +134,11 @@ public class InsertDetails extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Check Field Validity Function, checks validity of entered data
+     * @return returns data validity
+     */
     private boolean CheckFieldValidity() {
         if (date.length() == 0) {
             date.setError("This field is required");
@@ -178,6 +210,9 @@ public class InsertDetails extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Function to save data to the database
+     */
     private void saveData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
@@ -187,6 +222,10 @@ public class InsertDetails extends AppCompatActivity {
         editor.putString("details",jsonString);
         editor.apply();
     }
+
+    /**
+     * Function to load data
+     */
     private void loadData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
