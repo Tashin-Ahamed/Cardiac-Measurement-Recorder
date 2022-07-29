@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * unit test class
+ */
 public class RecordList {
     private List<ModelClass> records = new ArrayList<>();
 

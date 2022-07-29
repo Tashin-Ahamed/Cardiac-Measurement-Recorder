@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+
+
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     public static RecyclerAdapter recyclerAdapter;
@@ -26,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
     Button addButton;
     ModelClass modelClass;
 
-
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +44,22 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager( new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         recyclerAdapter.setCustomClickListener(new RecyclerAdapter.CustomClickListener() {
+            /**
+             *
+             * @param position
+             * @param v
+             */
             @Override
             public void cusOnClick(int position, View v) {
                 Intent intent = new Intent(MainActivity.this, ViewDetails.class);
                 intent.putExtra("index",position);
                 startActivity(intent);
             }
+
+            /**
+             *
+             * @param position
+             */
             @Override
             public void onDeleteClick(int position) {
                 arrayList.remove(position);
@@ -56,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
         });
         addButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * 
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,InsertDetails.class));
@@ -64,6 +83,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * Method to save data
+     */
     private void saveData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
@@ -73,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("details",jsonString);
         editor.apply();
     }
+
+    /**
+     * Method to load data
+     */
     private void loadData()
     {
         sharedPreferences = getSharedPreferences("sharedpreference",MODE_PRIVATE);
